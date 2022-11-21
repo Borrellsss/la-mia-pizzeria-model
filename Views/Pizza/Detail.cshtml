@@ -9,7 +9,7 @@
     <div class="mb-3">
         <p>@Model.Description</p>
         <div class="card-text">@Model.Price.ToString("0.00") €</div>
-        <div class="@(Model.IsAvailable == true ? "text-success" : "text-danger")">@(Model.IsAvailable == true ? "Disponibile" : "esaurito")</div>
+        <div class="@(Model.IsAvailable ? "text-success" : "text-danger")">@(Model.IsAvailable ? "Disponibile" : "esaurito")</div>
     </div>
 
     <a href="@Url.Action("Index")" class="btn btn-primary">torna alla home</a>

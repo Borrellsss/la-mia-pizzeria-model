@@ -27,7 +27,7 @@ caricata se richiamo l’url “/” della nostra webapp?*@
                         <div class="card-body">
                             <h5 class="card-title">@pizza.Name</h5>
                             <div class="card-text">@pizza.Price.ToString("0.00") €</div>
-                            <div class="card-text @(pizza.IsAvailable == true ? "text-success" : "text-danger")">@(pizza.IsAvailable == true ? "Disponibile" : "esaurito")</div>
+                            <div class="card-text @(pizza.IsAvailable ? "text-success" : "text-danger")">@(pizza.IsAvailable ? "Disponibile" : "esaurito")</div>
                             <a href="@Url.Action("Detail", new {id = pizza.Id})" class="btn btn-primary">vedi dettaglio</a>
                         </div>
                     </div>
